@@ -46,14 +46,14 @@ public class CalculatorTest {
 	public void testSubtractDecimals() {
 		Calculator calcInstance = new Calculator();
 		calcInstance.subtract(110.13, 84.12);
-		assertEquals("110.13 - 84.12 is 16.01",26.01,calcInstance.getResult(),.0001);
+		assertEquals("110.13 - 84.12 is 26.01",26.01,calcInstance.getResult(),.0001);
 	}
 	
 	@Test
 	public void testSubtractNegatives() {
 		Calculator calcInstance = new Calculator();
 		calcInstance.subtract(-19, -42);
-		assertEquals("-19 - 42 is 23",23,calcInstance.getResult(),.0001);
+		assertEquals("-19 - -42 is 23",23,calcInstance.getResult(),.0001);
 	}
 	
 	@Test
@@ -99,7 +99,7 @@ public class CalculatorTest {
 	public void testDivideDecimals() {
 		Calculator calcInstance = new Calculator();
 		calcInstance.divide(15.5, 2.5);
-		assertEquals("15.5 / 2.2 is 6.2",6.2,calcInstance.getResult(),.0001);
+		assertEquals("15.5 / 2.5 is 6.2",6.2,calcInstance.getResult(),.0001);
 	}
 	
 	@Test
@@ -127,7 +127,7 @@ public class CalculatorTest {
 		Calculator calcInstance = new Calculator();
 		calcInstance.multiply(5, 5);
 		double outcome = calcInstance.result;
-		assertEquals("8 + 0 is 8",outcome,calcInstance.getResult(),.0001);
+		assertEquals("Result value is 25. GetResult should return 25.",outcome,calcInstance.getResult(),.0001);
 	}
 
 }
